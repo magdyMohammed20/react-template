@@ -72,5 +72,22 @@
             "title": "Pin Me on",
             "body": "Social Pinterest"
         }
+    ],
+    "skills": [
+        {
+            "id": 1,
+            "skillName": "Html",
+            "percentage": "80%"
+        },
+        {
+            "id": 2,
+            "skillName": "Css",
+            "percentage": "70%"
+        },
+        {
+            "id": 1,
+            "skillName": "Bootstrap",
+            "percentage": "65%"
+        }
     ]
 }
