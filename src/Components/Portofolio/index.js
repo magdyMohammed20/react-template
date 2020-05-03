@@ -1,9 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
+import { ImgContainer } from './style'
 
 const Portofolio = () => {
+
+    const [portofolio, setPortofolio] = useState([])
+
+    useEffect(() => {
+        async function fetchData() {
+            const result = await axios.get('Api/data.json')
+            setPortofolio(result.data.portfolio)
+        }
+
+        fetchData()
+
+    }, []);
+
+    const all = portofolio.length > 0 ?
+        portofolio.map(portofolioItem => {
+            return (
+                <div className='col-4 my-2' key={portofolioItem.id}>
+                    <ImgContainer>
+                        <img src={portofolioItem.image} className='w-100' />
+                    </ImgContainer>
+                </div>
+            )
+        })
+        : '';
+
+
     return (
-        <div>
-            Portofolio
+        <div className='pt-4'>
+            <div className='container'>
+                <h1>My Portofolio</h1>
+                <div className='row mt-4'>
+                    {all}
+                </div>
+            </div>
         </div>
     );
 };
