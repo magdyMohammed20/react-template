@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-import { NavbarStyle, NavbarLink, NavbarNormalLink } from './style'
+import { NavbarStyle, NavbarLink } from './style'
 
 const Navbar = () => {
     return (
@@ -21,16 +21,16 @@ const Navbar = () => {
                             </NavbarLink>
                         </li>
                         <li className="nav-item">
-                            <NavbarNormalLink href='#' className="nav-link">Work</NavbarNormalLink>
+                            <NavbarLink to='/work' className="nav-link">Work</NavbarLink>
                         </li>
                         <li className="nav-item">
-                            <NavbarNormalLink href='#' className="nav-link">Portofolio</NavbarNormalLink>
+                            <NavbarLink to='/portofolio' className="nav-link">Portofolio</NavbarLink>
                         </li>
                         <li className="nav-item">
-                            <NavbarNormalLink href='#' className="nav-link">Resume</NavbarNormalLink>
+                            <NavbarLink to='/resume' className="nav-link">Resume</NavbarLink>
                         </li>
                         <li className="nav-item">
-                            <NavbarNormalLink href='#' className="nav-link">About</NavbarNormalLink>
+                            <NavbarLink to='/about' className="nav-link">About</NavbarLink>
                         </li>
                         <li className="nav-item">
                             <NavbarLink to='/contact' className="nav-link">Contact</NavbarLink>
