@@ -14,7 +14,6 @@ const Index = () => {
                 <Navbar />
                 <Route path='/' exact component={Home} />
                 <Route path='/contact' component={Contact} />
-
                 <Route path='/work' component={Work} />
                 <Route path='/portofolio' component={Portofolio} />
                 <Route path='/resume' component={Profile} />
