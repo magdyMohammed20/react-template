@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-import { NavbarStyle } from './style'
+import { NavbarStyle, NavbarLink, NavbarNormalLink } from './style'
 
 const Navbar = () => {
     return (
@@ -9,31 +9,31 @@ const Navbar = () => {
                 <NavLink to='/' className="navbar-brand" >
                     Navbar
                 </NavLink>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <NavLink to='/' className="nav-link">
+                            <NavbarLink to='/' className="nav-link">
                                 Home
-                            </NavLink>
+                            </NavbarLink>
                         </li>
                         <li className="nav-item">
-                            <a href='#' className="nav-link">Work</a>
+                            <NavbarNormalLink href='#' className="nav-link">Work</NavbarNormalLink>
                         </li>
                         <li className="nav-item">
-                            <a href='#' className="nav-link">Portofolio</a>
+                            <NavbarNormalLink href='#' className="nav-link">Portofolio</NavbarNormalLink>
                         </li>
                         <li className="nav-item">
-                            <a href='#' className="nav-link">Resume</a>
+                            <NavbarNormalLink href='#' className="nav-link">Resume</NavbarNormalLink>
                         </li>
                         <li className="nav-item">
-                            <a href='#' className="nav-link">About</a>
+                            <NavbarNormalLink href='#' className="nav-link">About</NavbarNormalLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/contact' className="nav-link">Contact</NavLink>
+                            <NavbarLink to='/contact' className="nav-link">Contact</NavbarLink>
                         </li>
 
                     </ul>
