@@ -7,16 +7,15 @@ const Portofolio = () => {
     const [portofolio, setPortofolio] = useState([])
 
     useEffect(() => {
-        async function fetchData() {
+        async function fetchAboutData() {
             const result = await axios.get('Api/data.json')
             setPortofolio(result.data.portfolio)
         }
 
-        fetchData()
-
+        fetchAboutData()
     }, []);
 
-    const all = portofolio.length > 0 ?
+    const allAboutData = portofolio.length > 0 ?
         portofolio.map(portofolioItem => {
             return (
                 <div className='col-4 my-2' key={portofolioItem.id}>
@@ -34,7 +33,7 @@ const Portofolio = () => {
             <div className='container'>
                 <h1>My Portofolio</h1>
                 <div className='row mt-4'>
-                    {all}
+                    {allAboutData}
                 </div>
             </div>
         </div>
