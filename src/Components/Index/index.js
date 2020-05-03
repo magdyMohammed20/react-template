@@ -8,7 +8,7 @@ const Index = () => {
         <div>
             <BrowserRouter>
                 <Navbar />
-                <Route path='/' component={Home} />
+                <Route path='/' exact component={Home} />
                 <Route path='/contact' component={Contact} />
             </BrowserRouter>
         </div>
